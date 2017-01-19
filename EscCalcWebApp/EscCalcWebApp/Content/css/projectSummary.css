@@ -1,0 +1,91 @@
+.h.home-image{padding: 0 15px 10px 0}
+.summ-btn-wrapper{display: block;margin-bottom: 2em;text-align:center}
+.summ-project{margin-right: .7em;color: #fff;background-color: #0071b9;font-weight: bold;border: none;width: 46%;border-radius: 3px;}
+.summ-project:hover{background-color: #0467A6;background: linear-gradient(#0467A6,rgb(0,113,185))}
+.building_name{}
+.building_name li{float: left;display: block;padding: 2px 22px;font-size: 1em;color: rgb(0,113,185)}
+.building_name li a:hover{text-decoration: none}
+.project-heading{margin-left:0px;margin-bottom: 2em;width:100%;text-align:center}
+
+.heading-type{font-size: 1.25em;font-family: arial;color: rgba(0,0,0,.7)}
+.section-heading{font-size: 0.8574em;font-family:arial;font-weight: bold;color:gray;}
+.heading-date{font-size: .8574em;font-family: arial;color: rgba(0,0,0,.5);margin-top: 5px}
+
+.desktop-card{width:50%;float:left;}
+.card-left,.card-right{width:100%;max-width:36em;padding-bottom:2em;padding-left:2em;padding-top:2em;background: #FFF;border-radius:3px;box-shadow: 0px 0px 8px rgba(0, 0, 0, .1);}
+.card-left{margin-right:1em;float:right}
+.card-right{margin-left:1em;float:left}
+
+.tab-view{margin-left: 60px}
+
+.header-wrapper{width: 100%;display: block; margin-top: 2em;padding-right:2em}
+.add-row{margin-top:1px;width:18px;float: right;cursor: pointer;}
+.report-add-row{margin-top: 2px}
+
+.triangle,.triangle1,.triangle2{display: none}
+/******** table data record styling **********/
+.record-list{padding: 0;width: 100%;;padding-top:.7em}
+.record-list:hover{background:rgb(241,241,241)}
+.right-box{margin-top: 2em}
+.record-row{width: 100%;display: block;height: 2.5em}
+.record-logo{float: left;width: 8%;padding-right:1em}
+.record-logo,.record-heading{height:inherit}
+.record-heading{width: 92%;float: left;padding-top:.2em;padding-right:2em}
+.bttm-line{border-bottom:1px solid #e1e1e1}
+.down-arrow-image{margin-bottom:0}
+/*.record-logo img{width: 25px}*/x
+.record-heading{width: 92%;float:left;font-size: 1em;color:rgb(0,113,185)}
+.right-arrow{padding-left: 5px;font-size: .7em;color:#337ab7}
+.record-expand{padding-top: 10px;width: 20px;float:right}
+.record-expand img{float: right;width: 18px;margin-top: 3px;margin-left:0}
+.record-expand img:hover{cursor: pointer;}
+.grey-font{color:grey}
+.border-btm-line{margin-left:8%;padding-right:2em}
+.inner-content-wrapper{border-left:3px solid rgb(224,242,251);margin-bottom:.7em;padding-left:2em}
+.bldng-expnd,.record-expnd,.elevator-expnd,.reports-expnd{width: 100%;padding-top: 1em}
+
+.building-table tr td,.elevator-table tr td,.reports-table tr td{padding-right: 1.3em;font-size: .8574em}
+.building-table tr td:last-child,.elevator-table tr td:last-child,.reports-table tr td:last-child{padding-right:0}
+.button-row{display: block;}
+.btns{display: inline;padding-right: .7em}
+.searchBtn{margin-bottom: 1.3em;width:100px}
+.lg-btns,.simulation-btn{width:125px}
+.data-value{padding-left: 0}
+
+.circle{width: 25px;height: 25px;border-radius: 50%;text-align: center;float: left;font-size: 18px;font-weight: bold}
+.orange-circle{background-color: rgb(255,198,39);color: rgb(255,255,255);}
+.info-circle{color: rgb(141,145,148);border:1px solid rgb(141,145,148);}
+.simulation-row{width: 100%;height: 50px;margin-bottom: 1.3em;border-top: 1px solid #e3e3e3;border-bottom: 1px solid #e3e3e3;padding-top: .7em;padding-bottom: .7em}
+.simulation-text{padding: 8px 0px;margin-left: .7em;font-size: .8574em;font-family: arial}
+.simulation-btn{margin-bottom: 0}
+.header-info{display: block;height:25px;padding-right:2em}
+.header-info.right-card{margin-bottom:2em}
+
+@media screen and (max-width:1223px) and (min-width: 1024px){
+	.searchBtn{width: 100px}
+	.lg-btns{width: 120px}
+	.simulation-btn{width: 117px}
+}
+
+@media screen and (max-width:1023px) and (min-width: 768px){
+	.desktop-card{width:100%}
+    .card-left,.card-right{float:left;max-width:100%;margin-left:0;margin-right:0;border-radius:0;box-shadow:none}
+    
+
+	.building_name li{float: left;display: block;padding: 2px 10px}	
+	.triangle,.triangle1,.triangle2{margin-top: 35px}
+	.top-header-for-tab{margin-top: 0}	
+	.hidden-sm{display: none}
+	.heading-date{display: block}
+	.cont-pdng {padding-left: 20px;padding-bottom: 30px;margin-bottom: 15px;margin-top: 0px;background: #FFF;margin-left: 0px}
+	.tab-view{padding-top: 0px}
+
+
+	/** styling for the triangle */
+	.triangle,.triangle1,.triangle2{display: block}
+	.triangle::after{margin-left: -125px;display: block}	
+}
+/*#expanded-div{height: 50px;width: 100%}*/
+
+.BuildingsListItem{float:left;width:180px;text-align: center;font-size:1em;color:#0071b9;font-weight:bold;cursor:pointer;text-transform:uppercase;padding-bottom:2em}
+

@@ -1,0 +1,625 @@
+﻿@model EscCalc.Domain.Entities.MyEntities.CaseProperties
+@{
+    ViewBag.Title = "Standard";
+}
+
+
+
+   
+    
+ 
+<script src="~/Scripts/jquery-1.12.4.min.js"></script>
+<script src="~/Scripts/jquery-ui-1.12.1.min.js"></script>
+<script src="~/Content/js/accordian.js"></script>
+<link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+<link href="~/Content/themes/base/all.css" rel="stylesheet" />
+
+<link href="~/Content/themes/base/accordion/style.css" rel="stylesheet" />
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        label {
+            display: inline-block;
+            width: 350px;
+            text-align: right;
+            clear: both;
+            float: left;
+            margin-right: 15px;
+        }
+
+        ​ button.accordion {
+            background-color: cornflowerblue;
+            color: #444;
+            cursor: pointer;
+            padding: 18px;
+            width: 100%;
+            border: none;
+            text-align: left;
+            outline: none;
+            font-size: 15px;
+            transition: 0.4s;
+        }
+
+        button.accordion.active, button.accordion:hover {
+            background-color: cornflowerblue;
+        }
+
+        div.panel {
+            padding: 0 18px;
+            display: none;
+            background-color: white;
+        }
+
+            div.panel.show {
+                display: block;
+            }
+
+
+        h4 {
+            align-content: space-around;
+        }
+
+        .footer {
+            right: 0;
+            bottom: 0;
+            left: 0;
+        }
+
+        .accordion {
+            width: 200px;
+        }
+
+        .arrow {
+            float: right;
+            width: 0px;
+            height: 0px;
+            margin-top: 23px;
+            border: 10px solid transparent;
+            margin-top: 21px;
+            border-top-color: #F3F3F3;
+        }
+
+        .accordion-head.open .arrow {
+            margin-top: 11px;
+            border-bottom-color: #F3F3F3;
+            border-top-color: transparent;
+        }
+    </style>
+    @*<script type="text/javascript" src="http://www.google.com/jsapi"></script>
+
+        <script type="text/javascript">
+            google.load("jquery", "1.4.4");
+        </script>*@
+    <script type="text/javascript">
+        function NonstandardTruss()
+        {
+       
+            //initially hide the textbox
+            $("#Trussnonstandard").hide();
+            $("#TrusspackageId").change(function () {
+                if ($(this).find('option:selected').val() == "Customized") {
+                    $("#Trussnonstandard").show();
+                } else {
+                    $("#Trussnonstandard").hide();
+                }
+            });
+
+        }
+    </script>
+    <script type="text/javascript">
+
+        $("#name").on('input', function () {
+            var val = this.value;
+            if ($('#StepWidthValues option').filter(function () {
+                debugger;
+                if (val != null && val.length > 0 && val.trim().substring(val.trim().length - 2, val.trim().length) == "mm") {
+                  return this.value === val;
+            }
+            else {
+                return true;
+            }
+
+
+            }).length) {
+
+                $("#nonstd").hide();
+            }
+            else {
+                $("#nonstd").show();
+            }
+        });
+
+
+    </script>
+
+</head>
+
+<body style="background-color: #eaeaea;">
+
+    <div class="container-fluid">
+    </div>
+    <br />
+    <br />
+    <br />
+    <br />
+    @using (Html.BeginForm("SaveCaseInfo","Home",FormMethod.Post))
+    {
+        <div class="form-group">
+            <label for="inputsm">Case Name</label>
+      
+            @Html.TextBoxFor(m => m.CaseName)
+        </div>
+
+        <div class="form-group">
+         @Html.Label("ProjectName")
+
+            @Html.TextBoxFor(m => m.Project)
+        </div>
+        <div class="form-group">
+            @Html.Label("Product")
+
+
+           
+            @Html.DropDownListFor(model=>model.ProductId, ViewBag.Pro as SelectList, "Select Product")
+
+
+           
+        </div>
+        <div class="form-group">
+            @Html.Label("Code")
+
+            <input class="form-control" id="code1" type="text" value="EN-115">
+        </div>
+        <div class="form-group">
+            @Html.Label("Vertical Rise")
+
+            
+            @Html.TextBoxFor(m => m.VerticalRise)
+        </div>
+            <div class="form-group">
+                @Html.Label("Nominal Step band speed")
+            
+                @Html.TextBoxFor(m => m.StepbandSpeed, new { id = "Stepbandspeedid", @list = "Stepbandspeedvalues" })
+                <datalist id="Stepbandspeedvalues">
+                    <option> Select or Type a Value</option>
+                    @foreach (var item in ViewBag.nominalStepBandSpeed)
+                    {
+                        <option>@item.StepbandSpeed</option>
+                    }
+                  
+                </datalist>
+
+            </div>
+
+            <div class="form-group">
+                @Html.Label("Step width")
+            
+               @Html.TextBoxFor(m => m.StepWidth,new {id="name", @list="StepWidthValues"})
+                <datalist id="StepWidthValues">
+                   
+                    <option> Select or Type a Value</option>
+                    @foreach (var item in ViewBag.nominalStepWidth)
+                    {
+                        <option>@item.StepWidth</option>
+                       
+                    }
+
+                  
+                </datalist>
+            </div>
+            <div id="nonstd" hidden="hidden">
+                <br />
+                <div class="form-group">
+                    <label for="inputsm">CMAX: Maximum capacity ( person / hour ) </label>
+                    <input class="form-control" id="cmax" type="text">
+                   
+                </div>
+
+                <div class="form-group">
+                    <label for="inputsm">Dead weight of step assembly (Mst)</label>
+                    <input class="form-control" id="dwt" type="text">
+                </div>
+                <div class="form-group">
+                    <label for="inputsm">Horizontal distance of chain roller to balance point of step assembly (Lst)</label>
+                    <input class="form-control" id="hd" type="text">
+                </div>
+                <div class="form-group">
+                    <label for="inputsm">Distance step roller to chain roller (Lr)</label>
+                    <input class="form-control" id="ds" type="text">
+                </div>
+
+                <div class="form-group">
+                    <label for="inputsm">Horizontal distance of chain roller to step roller (Lsr)</label>
+                    <input class="form-control" id="hdsstep" type="text">
+                </div><br />
+
+            </div>
+            <br />
+            <br />
+
+
+            <div class="form-group">
+                @Html.Label("Truss Package")
+              
+
+                @Html.DropDownListFor(model => model.TrussPackageId, ViewBag.Truss as SelectList, "Select Truss Package", new { @id="TrusspackageId", @onchange = "NonstandardTruss()" })
+
+
+
+
+            </div>
+            <br />
+            <div id="Trussnonstandard" hidden="hidden">
+                <div class="form-group">
+
+                    <label for="sel1"> Inclination angle </label>
+                    <select class="selectpicker" id="incl1" style="width:350px;">
+                        <option>select or type a value</option>
+                        <option>27.3</option>
+                        <option>30</option>
+                        <option>35</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="inputsm">Horizontal No of steps Upper</label>
+                    <input class="form-control" id="HNSU" type="text">
+                </div>
+                <div class="form-group">
+                    <label for="inputsm">Horizontal No of steps Lower</label>
+                    <input class="form-control" id="HNSL" type="text">
+                </div>
+                <div class="form-group">
+                    <label for="inputsm">Transition radius Upper Passenger</label>
+                    <input class="form-control" id="HNSUP" type="text">
+                </div>
+                <div class="form-group">
+                    <label for="inputsm">Transtion radius Lower Passenger</label>
+                    <input class="form-control" id="HNLP" type="text">
+                </div>
+                <div class="form-group">
+                    <label for="inputsm">Transition radius Upper BackTrack</label>
+                    <input class="form-control" id="HNSUBT" type="text">
+                </div>
+                <div class="form-group">
+                    <label for="inputsm">Transtion radius Lower BackTrack</label>
+                    <input class="form-control" id="HNLBT" type="text">
+                </div>
+
+            </div>
+
+            <br />
+            <div class="form-group">
+                @Html.Label("Step chain guide width")
+                @Html.DropDownListFor(model=>model.GuideId, ViewBag.StepChain as SelectList, "Select GuideWidth")
+
+
+
+            </div>
+
+            <div class="form-group">
+
+                <label for="inputsm">Load Profile</label>
+
+                <label for="sel1"></label>
+
+                <div style="vertical-align:bottom;margin-left:180px">
+                    <div style="vertical-align:bottom;margin-left:180px">
+                        <table style="width:350px;" class="table table-bordered">
+
+                            <tr style="width:350px;">
+                                <td>Time in % (q)</td>
+                                <td>Load in % (p)</td>
+
+
+                            </tr>
+                            <tr style="width:350px;">
+
+                                <td><input type="text" style="width:100%;" /></td>
+                                <td><input type="text" style="width:100%;" /></td>
+                            </tr>
+                            <tr style="width:350px;">
+
+                                <td><input type="text" style="width:100%;" /></td>
+                                <td><input type="text" style="width:100%;" /></td>
+                            </tr>
+                            <tr style="width:350px;">
+
+                                <td><input type="text" style="width:100%;" /></td>
+                                <td><input type="text" style="width:100%;" /></td>
+                            </tr>
+                            <tr style="width:350px;">
+
+                                <td><input type="text" style="width:100%;" /></td>
+                                <td><input type="text" style="width:100%;" /></td>
+                            </tr>
+                            <tr style="width:350px;">
+
+                                <td><input type="text" style="width:100%;" /></td>
+                                <td><input type="text" style="width:100%;" /></td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <br />
+            <br />
+            <div style="margin-left:350px">
+                <input type="button" class="accordion" value="Truss Package">
+                <div class="panel">
+
+                    <div class="form-group">
+                        <label for="sel1">  Truss Upper Extension Length </label>
+                       
+                        @Html.TextBoxFor(m => m.TrussUpperExtensionLength)
+                    </div>
+                    <div class="form-group">
+                        <label for="sel1">  Truss Lower Extension Length </label>
+                       
+                        @Html.TextBoxFor(m => m.TrussLowerExtensionLength)
+                    </div>
+                </div>
+            </div>
+
+            <br />
+            <br />
+            <div style="margin-left:350px">
+                <input type="button" class="accordion" value="Step Band">
+                <div class="panel">
+
+
+                    <div class="form-group">
+                        @Html.Label("Step band Type")
+                        @Html.DropDownListFor(model=>model.StepMaterialId, ViewBag.StepMaterial as SelectList, "Select Step Material")
+
+
+                    </div>
+
+
+
+                    <div class="form-group">
+                        @Html.Label("Step Chain Type")
+
+                        @Html.DropDownListFor(model=>model.StepChainTypeId, ViewBag.StepChainType as SelectList, "Select Step Chain Type")
+
+                    </div>
+                    <div class="form-group">
+                        @Html.Label(" Step chain condition ")
+                        @Html.DropDownListFor(model=>model.WearingFactorId, ViewBag.wearingFactor as SelectList, "Select Step Chain condition")
+
+
+
+
+                    </div>
+
+
+                    <div class="form-group">
+                        @Html.Label("Step Chain Safety Factor and Pin Pressure")
+                        @Html.DropDownListFor(model=>model.SafetyFactorandPinPressureId, ViewBag.safetyfactorPinPressure as SelectList, "Select SafetyFactorandPinPressure")
+                       
+                       
+                    </div>
+
+                    <div class="form-group">
+                        @Html.Label(" Destination Country ")
+
+                        @Html.DropDownListFor(model=>model.DestinationCountryId, ViewBag.countryType as SelectList, "Select Country")
+
+
+                    </div>
+                    <div class="form-group">
+                        @Html.Label(" Escalator Environment ")
+
+                        @Html.DropDownListFor(model=>model.EscalatorEnvironmentId, ViewBag.environmentType as SelectList, "Select Escalator Environment")
+
+                    </div>
+                </div>
+            </div>
+            <br />
+            <br />
+                <div style="margin-left:350px" >
+                    <input type="button" class="accordion" value="Drive System">
+                    <div class="panel">
+
+
+                        <div class="form-group">
+
+                            @Html.Label(" Power Supply ")
+
+                            @Html.DropDownListFor(model=>model.PowerSupplyId, ViewBag.powerSupply as SelectList, "Select Power Supply")
+
+
+
+                        </div>
+                        <div class="form-group">
+                            @Html.Label(" Gearbox Type ")
+
+                            @Html.DropDownListFor(model => model.GearBoxTypeId, ViewBag.gearboxType as SelectList, "Select GearBox Type")
+
+
+
+
+                        </div>
+                        <div class="form-group">
+                            @Html.Label(" Main drive Strand Quantity  ")
+
+                            @Html.DropDownListFor(model => model.MainDriveStrandQuantityId, ViewBag.strandQuantity as SelectList, "Select strand quantity")
+
+
+                        </div>
+
+                        <div class="form-group">
+
+
+                            @Html.Label(" Load type  ")
+
+                            @Html.DropDownListFor(model=>model.MainDriveStrandQuantityId, ViewBag.impactCoefficient as SelectList)
+
+
+                        </div>
+                        <div class="form-group">
+                            @Html.Label(" Main drive chain condition ")
+                            @Html.DropDownList("Name", ViewBag.wearingFactor as SelectList, "Select Main drive chain condition")
+
+
+                        </div>
+
+                        <div class="form-group">
+                            <label for="sel1">Safety factor  </label>
+                            <div class="form-group">
+
+                            
+
+                                @Html.TextBoxFor(m => m.SafetyFactor)
+                            </div>
+
+                        </div>
+                    </div>
+
+
+                </div>
+
+
+                <br />
+                <br />
+                <div style="margin-left:350px">
+                    <input type="button" class="accordion" value="Handrail System">
+                    <div class="panel">
+
+                        <div class="form-group">
+
+                            @Html.Label("  HandRail Drive Type ")
+                            @Html.DropDownList("HandrailDriveTypeName", ViewBag.handraiDriveType as SelectList, "Select HandRail Drive Type")
+
+
+
+                        </div>
+
+                        <div class="form-group">
+
+
+                            @Html.Label("  HandRail Shape Type  ")
+                            @Html.DropDownList("HandrailShapeTypeName", ViewBag.handrailShapeType as SelectList, "Select HandRail Shape Type")
+
+
+
+
+                        </div>
+                    </div>
+                </div>
+                <br />
+                <br />
+                <div style="margin-left:350px">
+
+
+                    <input type="button"  class="accordion" value="Custom Components" >
+                    <div class="panel">
+
+                        <div class="form-group">
+ 
+            <table>
+                <tr>
+                    <td>
+                       
+                        @Html.CheckBoxFor(m=>m.IsCustomStep)
+                        @Html.Label("Step")
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+               
+                        @Html.CheckBoxFor(m => m.IsCustomStepChain)
+                        <label> StepChain </label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+             
+                        @Html.CheckBoxFor(m => m.IsCustomTrackSystem)
+                        <label> TrackSystem</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                    
+                        @Html.CheckBoxFor(m => m.IsCustomGearbox)
+                        <label> Gearbox</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        @*<input type="checkbox" id="Handrail" name="NonStandardCheck[]" />*@
+                        @Html.CheckBoxFor(m => m.IsCustomHandrail)
+                        <label> Handrail</label>
+                    </td>
+                </tr>
+            </table>
+            </div>
+
+
+                    </div>
+                </div>
+       
+                <br />
+                <br />
+                <table style="margin-left:135px">
+                    <tr>
+                        <td>
+                           
+                            @Html.CheckBoxFor(m => m.IsAdvancedCheck)
+                            <label>Advanced Parameters</label>
+                        </td>
+                    </tr>
+                </table>
+                <br />
+               
+                <input type="submit" id="Gobutton" value="Go" style="margin-left:500px" onclick="NextPage()"/>
+        // @Html.EditorFor(m => m.ValueToSave)
+    }
+    <br />
+    <script>
+
+
+
+
+
+        var acc = document.getElementsByClassName("accordion");
+        var i;
+
+        for (i = 0; i < acc.length; i++) {
+            acc[i].onclick = function () {
+                this.classList.toggle("active");
+                this.nextElementSibling.classList.toggle("show");
+            }
+        }
+
+
+
+        function NextPage() {
+
+            var isChecked = $("#AdvancedParamId").is(":checked");
+
+            var total = $('input[name="NonStandardCheck[]"]:checked').length;
+            if (total > 0) {
+
+                var url = '@Url.Action("NonStandard", "Home")';
+                window.location.href = url;
+            }
+            else if (isChecked) {
+                debugger;
+                var url = '@Url.Action("Advanced", "Home")';
+                window.location.href = url;
+
+            }
+            else {
+                var url = '@Url.Action("Index", "Home")';
+                window.location.href = url;
+            }
+
+        }
+    </script>
+
+</body>
+</html>

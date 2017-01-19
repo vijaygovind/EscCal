@@ -1,0 +1,336 @@
+
+<script src="/Scripts/jquery-1.10.2.js"></script>
+<script src="/Scripts/jquery-1.10.2.min.js"></script>
+<script src="/Scripts/jsPDF.js" ></script>
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+	<meta charset="utf-8" />
+    <style>
+        
+#content {
+    position: relative;
+}
+#content img {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+}
+TABLE {border-width: 1px;border-style: solid;border-color: black;border-collapse: collapse;}
+TH {border-width: 1px;padding: 3px;border-style: solid;border-color: black;background-color: #6495ED;}
+TD {border-width: 1px;padding: 3px;border-style: solid;border-color: black;width:230px;}
+.odd  { background-color:#ffffff; }
+.even { background-color:#dddddd; }
+    </style>
+</head>
+<body>
+             
+           <div id="content">
+            <img src="/Content/img/konelogo@2x.png" class="ribbon" />
+
+        </div>
+        <br />
+        <div id="header">
+            <center style="margin-top:30px"><h3>Escalator Calculation Tool</h3></center>
+        </div>
+        <div id="BasicInputparameters">
+            <ul>
+                <li>
+                    <div>
+                        <h4>Input Parametrs</h4>
+
+                    </div>
+                </li>
+            </ul>
+            <table style="margin-left:150px">
+                <tr>
+                    <td>
+                        Input Parameter Name
+                    </td>
+                    <td>
+                        Value
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="inputsm">Case Name</label>
+                    </td>
+                    <td></td>
+
+                </tr>
+                <tr>
+                    <td>
+                        <label for="inputsm">ProjectName</label>
+                    </td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="inputsm">Product</label>
+                    </td>
+                    <td></td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <label for="inputsm">Code</label>
+                    </td>
+                    <td></td>
+                </tr>
+
+
+                <tr>
+                    <td>
+                        <label for="inputsm">Vertical Rise</label>
+                    </td>
+                    <td></td>
+                </tr>
+
+
+                <tr>
+                    <td>
+                        <label for="inputsm">Nominal Step band speed</label>
+                    </td>
+                    <td></td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <label for="inputsm">Step width</label>
+                    </td>
+                    <td></td>
+                </tr>
+
+
+                <tr>
+                    <td>
+                        <label for="inputsm">Truss Package</label>
+                    </td>
+                    <td></td>
+                </tr>
+
+
+                <tr>
+                    <td>
+                        <label for="inputsm">Inclination angle</label>
+                    </td>
+                    <td></td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <label for="inputsm">Horizontal No of steps Upper</label>
+                    </td>
+                    <td></td>
+                </tr>
+
+
+                <tr>
+                    <td>
+                        <label for="inputsm">Horizontal No of steps Lower</label>
+                    </td>
+                    <td></td>
+                </tr>
+
+
+                <tr>
+                    <td>
+                        <label for="inputsm">Transition radius Upper Passenger</label>
+                    </td>
+                    <td></td>
+                </tr>
+
+
+                <tr>
+                    <td>
+                        <label for="inputsm">Transtion radius Lower Passenger</label>
+                    </td>
+                    <td></td>
+                </tr>
+
+
+                <tr>
+                    <td>
+                        <label for="inputsm">Transition radius Upper BackTrack</label>
+                    </td>
+                    <td></td>
+                </tr>
+
+
+                <tr>
+                    <td>
+                        <label for="inputsm">Transtion radius Lower BackTrack</label>
+                    </td>
+                    <td></td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <label for="inputsm">Step chain guide width</label>
+                    </td>
+                    <td></td>
+                </tr>
+
+
+
+                <tr>
+                    <td>
+                        <label for="inputsm">Truss Upper Extension Length </label>
+                    </td>
+                    <td></td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <label for="inputsm">Truss Lower Extension Length</label>
+                    </td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="inputsm">Step band Type</label>
+                    </td>
+                    <td></td>
+                </tr>
+
+
+                <tr>
+                    <td>
+                        <label for="inputsm">Step chain condition</label>
+                    </td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="inputsm">Step Chain Safety Factor and Pin Pressure</label>
+                    </td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="inputsm"> Destination Country</label>
+                    </td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="inputsm">Escalator Environment</label>
+                    </td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="inputsm">Power Supply</label>
+                    </td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="inputsm">Gearbox Type</label>
+                    </td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="inputsm">Main drive Strand Quantity </label>
+                    </td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="inputsm">Load type </label>
+                    </td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="inputsm">SafetyFactor</label>
+                    </td>
+                    <td></td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <label for="inputsm">HandRail Drive Type</label>
+                    </td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="inputsm">HandRail Shape Type</label>
+                    </td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="inputsm">IsCustomStep</label>
+                    </td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="inputsm">IsCustomStepChain</label>
+                    </td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="inputsm">IsCustomTrackSystem</label>
+                    </td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="inputsm">  IsCustomGearbox</label>
+                    </td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="inputsm">IsCustomHandrail</label>
+                    </td>
+                    <td></td>
+                </tr>
+
+            </table>
+        </div>
+        <br />
+        <div id="OutputParameters">
+            <ul>
+                <li>
+                    <div>
+                        <h4> Output</h4>
+                    </div>
+                    <ul>
+                        <li>
+                            System Level Calculations
+                            <ul>
+                                <li>Passenger Load</li>
+
+
+                            </ul>
+                            <div>
+                                <table style="margin-left:90px">
+                                    <tr>
+                                        <td>param1</td>
+                                        <td>param2</td>
+                                    </tr>
+                                    <tr>
+                                        <td>param3</td>
+                                        <td>value</td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <input type="submit" id="create_pdf" value="submit" />
+    
+   
+ 
+</body>
+
+</html>

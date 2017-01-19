@@ -1,0 +1,173 @@
+﻿
+@{
+    ViewBag.Title = "NonStandard";
+}
+
+<script src="~/Scripts/jquery-1.12.4.min.js"></script>
+<script src="~/Scripts/jquery-ui-1.12.1.min.js"></script>
+<link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+<link href="~/Content/themes/base/all.css" rel="stylesheet" />
+<link href="~/Content/demos.css" rel="stylesheet" />
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        label {
+            display: inline-block;
+            width: 350px;
+            text-align: right;
+            clear: both;
+            float: left;
+            margin-right: 15px;
+        }
+
+        input {
+            display: inline-block;
+        }
+
+        table {
+            column-gap: 20px;
+        }
+
+        input[type="radio"] {
+            margin: 10px 8px;
+        }
+    </style>
+    <script type="text/javascript" src="http://www.google.com/jsapi"></script>
+    <script type="text/javascript">
+        google.load("jquery", "1.4.4");
+    </script>
+
+</head>
+<body>
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <label for="inputsm" id="abf" style="margin-left:200px">
+        You have chosen a Non-Standard configuration
+    </label><br /><br />
+    <div id="nonstd">
+        <br />
+        <div class="form-group">
+            <label for="inputsm">Load from STD or Non-STD configuration </label>
+            <select id="sel1" style="width:145px;height:25px;margin-left:30px;">
+                <option>select a value</option>
+                <option>600</option>
+                <option>800</option>
+                <option>1000</option>
+            </select>
+        </div><br />
+        <div class="form-group" style="display:inline-block;">
+            <label for="inputsm">CMAX: Maximum capacity ( person / hour ) </label>
+            <table>
+                <tr>
+
+                    <td>
+                        <label id="abcd" style="width:15px"></label>
+                    </td>
+                    <td>
+                        <input class="form-control" id="inputdefault" type="text" style="width:150px;height:25px;">
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <br />
+        <div class="form-group" style="display:inline-block;">
+            <label for="inputsm">Dead weight of step assembly (Mst)</label>
+            <table>
+                <tr>
+
+                    <td>
+                        <label id="abcd" style="width:15px"></label>
+                    </td>
+                    <td>
+                        <input class="form-control" id="inputdefault" type="text" style="width:150px;height:25px;">
+                    </td>
+                </tr>
+            </table>
+        </div><br />
+        <div class="form-group" style="display:inline-block;">
+            <label for="inputsm">Horizontal distance of chain roller to balance point of step assembly (Lst)</label>
+            <table>
+                <tr>
+                    <td>
+                        <label id="abcd" style="width:15px"></label>
+                    </td>
+                    <td>
+                        <input class="form-control" id="inputdefault" type="text" style="width:150px;height:25px;">
+                    </td>
+                </tr>
+            </table>
+        </div><br />
+        <div class="form-group" style="display:inline-block;">
+            <label for="inputsm">Distance step roller to chain roller (Lr)</label>
+            <table>
+                <tr>
+
+                    <td>
+                        <label id="abcd" style="width:15px"></label>
+                    </td>
+                    <td>
+                        <input class="form-control" id="inputdefault" type="text" style="width:150px;height:25px;">
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <br />
+        <div class="form-group" style="display:inline-block;">
+            <label for="inputsm">Horizontal distance of chain roller to step roller (Lsr)</label>
+            <table>
+                <tr>
+
+                    <td>
+                        <label id="abcd" style="width:15px"></label>
+                    </td>
+                    <td>
+                        <input class="form-control" id="inputdefault" type="text" style="width:150px;height:25px;">
+                    </td>
+                </tr>
+            </table>
+        </div><br />
+        <div class="form-group">
+            <label for="inputsm">Do you want to save this configuration</label>
+            No<input type="radio" name="a" checked />
+            Yes<input type="radio" name="a" />
+        </div>
+        <div class="form-group">
+            <table>
+                <tr>
+                    <td>
+                        <label for="inputsm">Name Component Configuration</label>
+                    </td>
+                    <td>
+                        <input class="form-control" id="inputdefault" type="text" style="width:150px;height:25px;">
+                    </td>
+                    <td>
+                        <label id="abcd" style="width:15px"></label>
+                    </td>
+                    <td>
+                        <input type="button" value="Save" style="background-color:ButtonFace;width:150px;height:30px;" />
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+    </div>
+
+    <script>
+
+        $(function () {
+            $('.rbox').attr('readonly', 'true'); // mark it as read only
+            $('.rbox').css('background-color', '#D5DBDB'); // change the background color
+        })
+
+    </script>
+</body>
+</html>
+
+
+
+
+

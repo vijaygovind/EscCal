@@ -1,0 +1,441 @@
+﻿@model EscCalc.Domain.Entities.MyEntities.FinalCalcParam
+@{ 
+    Layout = null;
+}
+<script src="/Scripts/jquery-1.10.2.js"></script>
+<script src="/Scripts/jquery-1.10.2.min.js"></script>
+<script src="/Scripts/jsPDF.js"></script>
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta charset="utf-8" />
+    <style>
+        #content {
+            position: relative;
+        }
+
+            #content img {
+                position: absolute;
+                top: 0px;
+                right: 0px;
+            }
+
+        TABLE {
+            border-width: 1px;
+            border-style: solid;
+            border-color: black;
+            border-collapse: collapse;
+        }
+
+        TH {
+            border-width: 1px;
+            padding: 3px;
+            border-style: solid;
+            border-color: black;
+            background-color: #6495ED;
+        }
+
+        TD {
+            border-width: 1px;
+            padding: 3px;
+            border-style: solid;
+            border-color: black;
+            width: 230px;
+        }
+
+        .odd {
+            background-color: #ffffff;
+        }
+
+        .even {
+            background-color: #dddddd;
+        }
+    </style>
+</head>
+<body>
+    @using (Html.BeginForm("DownloadViewPDF", "Home", FormMethod.Post))
+    {
+    <div id="content">
+        <img src="/Content/img/konelogo@2x.png" class="ribbon" />
+
+    </div>
+    <br />
+    <div id="header">
+        <center style="margin-top:30px"><h3>Escalator Calculation Tool</h3></center>
+    </div>
+    <div id="BasicInputparameters">
+        <ul>
+            <li>
+                <div>
+                    <h4>Input Parametrs</h4>
+
+                </div>
+            </li>
+        </ul>
+        <table style="margin-left:150px">
+            <tr>
+                <td>
+                    Input Parameter Name
+                </td>
+                <td>
+                    Value
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="inputsm">Case Name</label>
+                </td>
+                <td></td>
+
+            </tr>
+            <tr>
+                <td>
+                    <label for="inputsm">ProjectName</label>
+                </td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="inputsm">Product</label>
+                </td>
+                <td></td>
+            </tr>
+
+            <tr>
+                <td>
+                    <label for="inputsm">Code</label>
+                </td>
+                <td></td>
+            </tr>
+
+
+            <tr>
+                <td>
+                    <label for="inputsm">Vertical Rise</label>
+                </td>
+                <td></td>
+            </tr>
+
+
+            <tr>
+                <td>
+                    <label for="inputsm">Nominal Step band speed</label>
+                </td>
+                <td></td>
+            </tr>
+
+            <tr>
+                <td>
+                    <label for="inputsm">Step width</label>
+                </td>
+                <td></td>
+            </tr>
+
+
+            <tr>
+                <td>
+                    <label for="inputsm">Truss Package</label>
+                </td>
+                <td></td>
+            </tr>
+
+
+            <tr>
+                <td>
+                    <label for="inputsm">Inclination angle</label>
+                </td>
+                <td></td>
+            </tr>
+
+            <tr>
+                <td>
+                    <label for="inputsm">Horizontal No of steps Upper</label>
+                </td>
+                <td></td>
+            </tr>
+
+
+            <tr>
+                <td>
+                    <label for="inputsm">Horizontal No of steps Lower</label>
+                </td>
+                <td></td>
+            </tr>
+
+
+            <tr>
+                <td>
+                    <label for="inputsm">Transition radius Upper Passenger</label>
+                </td>
+                <td></td>
+            </tr>
+
+
+            <tr>
+                <td>
+                    <label for="inputsm">Transtion radius Lower Passenger</label>
+                </td>
+                <td></td>
+            </tr>
+
+
+            <tr>
+                <td>
+                    <label for="inputsm">Transition radius Upper BackTrack</label>
+                </td>
+                <td></td>
+            </tr>
+
+
+            <tr>
+                <td>
+                    <label for="inputsm">Transtion radius Lower BackTrack</label>
+                </td>
+                <td></td>
+            </tr>
+
+            <tr>
+                <td>
+                    <label for="inputsm">Step chain guide width</label>
+                </td>
+                <td></td>
+            </tr>
+
+
+
+            <tr>
+                <td>
+                    <label for="inputsm">Truss Upper Extension Length </label>
+                </td>
+                <td></td>
+            </tr>
+
+            <tr>
+                <td>
+                    <label for="inputsm">Truss Lower Extension Length</label>
+                </td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="inputsm">Step band Type</label>
+                </td>
+                <td></td>
+            </tr>
+
+
+            <tr>
+                <td>
+                    <label for="inputsm">Step chain condition</label>
+                </td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="inputsm">Step Chain Safety Factor and Pin Pressure</label>
+                </td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="inputsm"> Destination Country</label>
+                </td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="inputsm">Escalator Environment</label>
+                </td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="inputsm">Power Supply</label>
+                </td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="inputsm">Gearbox Type</label>
+                </td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="inputsm">Main drive Strand Quantity </label>
+                </td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="inputsm">Load type </label>
+                </td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="inputsm">SafetyFactor</label>
+                </td>
+                <td></td>
+            </tr>
+
+            <tr>
+                <td>
+                    <label for="inputsm">HandRail Drive Type</label>
+                </td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="inputsm">HandRail Shape Type</label>
+                </td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="inputsm">IsCustomStep</label>
+                </td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="inputsm">IsCustomStepChain</label>
+                </td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="inputsm">IsCustomTrackSystem</label>
+                </td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="inputsm">  IsCustomGearbox</label>
+                </td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="inputsm">IsCustomHandrail</label>
+                </td>
+                <td></td>
+            </tr>
+
+        </table>
+    </div>
+    <br />
+    <div id="OutputParameters">
+        <ul>
+            <li>
+                <div>
+                    <h4> Output</h4>
+                </div>
+                <ul>
+                    <li>
+                        System Level Calculations
+                        <ul>
+                            <li>Passenger Load</li>
+
+
+                        </ul>
+                        <div>
+                            <table style="margin-left:90px">
+                               
+                                    <tr style="width:80%;">
+                                        <td>@Html.Label("MotorPower")</td>
+                                        
+                                        <td>@ViewBag.NewFinalCalc.MotorPower</td>
+                                        
+                                    </tr>
+                                <tr style="width:80%;">
+                                    <td>@Html.Label("Deceleration")</td>
+                                    <td>@ViewBag.NewFinalCalc.Deceleration</td>
+
+                                </tr>
+                                <tr style="width:80%;">
+                                    <td>@Html.Label("SafetyFactorDriveChain")</td>
+                                    <td>@ViewBag.NewFinalCalc.SafetyFactorDriveChain</td>
+
+                                </tr>
+                                <tr style="width:80%;">
+                                    <td>@Html.Label("SafetyFactorGearBox")</td>
+                                    <td>@ViewBag.NewFinalCalc.SafetyFactorGearBox</td>
+
+                                </tr>
+                                <tr style="width:80%;">
+                                    <td>@Html.Label("ChainLinkSurfacePressure")</td>
+                                    <td>@ViewBag.NewFinalCalc.ChainLinkSurfacePressure</td>
+
+                                </tr>
+                                <tr style="width:80%;">
+                                    <td>@Html.Label("StepLoad")</td>
+                                    <td>@ViewBag.NewFinalCalc.StepLoad</td>
+
+                                </tr>
+                                <tr style="width:80%;">
+                                    <td>@Html.Label("PassengerStepLoad")</td>
+                                    <td>@ViewBag.NewFinalCalc.PassengerStepLoad</td>
+
+                                </tr>
+                                <tr style="width:80%;">
+                                    <td>@Html.Label("BrakeTimeWithoutBrakeIncidenceTime")</td>
+                                    <td>@ViewBag.NewFinalCalc.BrakeTimeWithoutBrakeIncidenceTime</td>
+
+                                </tr>
+                                <tr style="width:80%;">
+                                    <td>@Html.Label("BrakeTimeWithBrakeIncidenceTime")</td>
+                                    <td>@ViewBag.NewFinalCalc.BrakeTimeWithBrakeIncidenceTime</td>
+
+                                </tr>
+                                <tr style="width:80%;">
+                                    <td>@Html.Label("TorqueGearBoxOutputShaft")</td>
+                                    <td>@ViewBag.NewFinalCalc.TorqueGearBoxOutputShaft</td>
+
+                                </tr>
+                                <tr style="width:80%;">
+                                    <td>@Html.Label("TorqueMainShaft")</td>
+                                    <td>@ViewBag.NewFinalCalc.TorqueMainShaft</td>
+
+                                </tr>
+                                <tr style="width:80%;">
+                                    <td>@Html.Label("ChainRollerForceNorToTrack")</td>
+                                    <td>@ViewBag.NewFinalCalc.ChainRollerForceNorToTrack</td>
+
+                                </tr>
+                                <tr style="width:80%;">
+                                    <td>@Html.Label("ChainRollerTrackSupportForce")</td>
+                                    <td>@ViewBag.NewFinalCalc.ChainRollerTrackSupportForce</td>
+
+                                </tr>
+                                <tr style="width:80%;">
+                                    <td>@Html.Label("StepRollerForceNorToTrack")</td>
+                                    <td>@ViewBag.NewFinalCalc.StepRollerForceNorToTrack</td>
+
+                                </tr>
+                                <tr style="width:80%;">
+                                    <td>@Html.Label("TotalDeflection")</td>
+                                    <td>@ViewBag.NewFinalCalc.TotalDeflection</td>
+
+                                </tr>
+                            </table>
+                        </div>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+   
+    }
+
+    <script type="text/javascript">
+
+
+
+
+    </script>
+
+</body>
+
+</html>

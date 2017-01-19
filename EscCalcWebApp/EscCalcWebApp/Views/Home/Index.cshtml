@@ -1,0 +1,289 @@
+﻿@model List<EscCalc.Domain.Entities.ClassModel.TxnCaseVersionValuesForIndex>
+@{
+    ViewBag.Title = "Index";
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        label {
+            display: inline-block;
+            width: 350px;
+            text-align: right;
+            clear: both;
+            float: left;
+            margin-right: 15px;
+        }
+
+        ​ button.accordion {
+            background-color: cornflowerblue;
+            color: #444;
+            cursor: pointer;
+            padding: 18px;
+            width: 100%;
+            border: none;
+            text-align: left;
+            outline: none;
+            font-size: 15px;
+            transition: 0.4s;
+        }
+
+        button.accordion.active, button.accordion:hover {
+            background-color: cornflowerblue;
+        }
+
+        div.panel {
+            padding: 0 18px;
+            display: none;
+            background-color: white;
+        }
+
+            div.panel.show {
+                display: block;
+            }
+
+
+        h4 {
+            align-content: space-around;
+        }
+
+        body {
+            font-family: "Lato", sans-serif;
+        }
+
+        .tab {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            border: 1px solid #ccc;
+            background-color: #f1f1f1;
+            text-align: center;
+            margin-left: 120px;
+            margin-top: 100px;
+            width: 80%;
+        }
+
+        /* Float the list items side by side */
+        ul.tab li {
+            float: left;
+        }
+
+
+
+            /* Style the links inside the list items */
+            ul.tab li a {
+                display: inline-block;
+                color: black;
+                text-align: center;
+                padding: 14px 16px;
+                text-decoration: none;
+                transition: 0.3s;
+                font-size: 17px;
+                /*margin-left:4px;*/
+                margin-right: 4px;
+            }
+
+                /* Change background color of links on hover */
+                ul.tab li a:hover {
+                    background-color: #ddd;
+                }
+
+                /* Create an active/current tablink class */
+                ul.tab li a:focus, .active {
+                    background-color: #ccc;
+                }
+
+        /* Style the tab content */
+        .tabcontent {
+            display: none;
+            padding: 0;
+            overflow: hidden;
+            border: 1px solid #ccc;
+            border-top: none;
+            width: 81.5%;
+            margin-left: 120px;
+            text-align: center;
+        }
+
+        .container {
+            width: 25%;
+        }
+
+        table {
+            table-layout: fixed;
+            width: 120%;
+        }
+
+            table td {
+                overflow: hidden;
+                width: 8%;
+                white-space: nowrap;
+            }
+
+            table tr {
+                overflow: hidden;
+                width: 120%;
+            }
+
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        html, body {
+            height: 100%;
+        }
+
+        .row.vertical-divider {
+            overflow: hidden;
+        }
+
+            .row.vertical-divider > div[class^="col-"] {
+                text-align: center;
+                padding-bottom: 100px;
+                margin-bottom: -100px;
+                border-left: 3px solid #d9dee0;
+                border-right: 3px solid #d9dee0;
+            }
+
+            .row.vertical-divider div[class^="col-"]:first-child {
+                border-left: none;
+            }
+
+            .row.vertical-divider div[class^="col-"]:last-child {
+                border-right: none;
+            }
+    </style>
+    <script type="text/javascript">
+        function openCity(evt, cityName) {
+            var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tabcontent");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+            tablinks = document.getElementsByClassName("tablinks");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" active", "");
+            }
+            document.getElementById(cityName).style.display = "block";
+            evt.currentTarget.className += " active";
+        }
+
+        var count = 0;
+        $('input[type="checkbox"]').on('change', function () {
+            count = 1;
+            $('input[name="' + this.name + '"]').not(this).prop('checked', false);
+        });
+
+        function myFunction() {
+
+            if (count == 1) {
+                var url = '@Url.Action("Case", "Home")';
+                window.location.href = url;
+
+            }
+            else {
+                var url = '@Url.Action("Case", "Home")';
+                window.location.href = url;
+            }
+
+        }
+
+        function CreateNewVersionFunction() {
+
+            if (count == 1) {
+                var url = '@Url.Action("Case", "Home")';
+                window.location.href = url;
+            }
+            else {
+                alert("select a version");
+            }
+
+        }
+
+        function rotateTheArrow($this) {
+            $($this).find('.down-arrow-image').toggleClass('rotatedImg');
+            $($this).toggleClass('no-bttm-brdr');
+            $($this).parent().find('.extendable-row > td').toggleClass('brdr-btm');
+        }
+        $(document).ready(function () {
+            $("#myTable").tablesorter({ sortList: [[0, 0], [1, 0]] });
+        }
+    );
+    </script>
+    <script src="~/Scripts/jquery.tablesorter.min.js"></script>
+    <script src="~/Content/js/Index.js"></script>
+    <script src="~/CustomScripts/controller/projectsController.js"></script>
+</head>
+
+<body>
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <div class="row">
+        <ul class="tab" style="align-items:center;margin-left:135px;">
+            <div class="row vertical-divider">
+                <div class="col-md-6">
+                    <li><a href="javascript:void(0)" class="tablinks" onclick="openCity(event, 'MyCase')">MyCase</a></li>
+                </div>
+                <div class="col-md-6">
+                    <li><a href="javascript:void(0)" class="tablinks" onclick="openCity(event, 'ViewAll')">ViewAll</a></li>
+                </div>
+            </div>
+        </ul>
+    </div>
+    <div id="MyCase" class="tabcontent">
+        <div>
+            <table class="table table-bordered">
+                <tr style="width:80%;">
+                    <td style="width:2%"></td>
+                    <td style="width:8%">Case</td>
+                    <td style="width:8%">Version</td>
+                    <td style="width:8%">Project</td>
+                    <td style="width:10%">Product</td>
+                    <td style="width:8%">Vertical Rise</td>
+                    <td style="width:15%">TrussPackage</td>
+                    <td style="width:8%">StepWidth</td>
+                    <td style="width:8%">CretedBy</td>
+                    <td style="width:15%">CreatedOn</td>
+                    <td style="width:5%">Action</td>
+                    <td style="width:5%">Link</td>
+                </tr>
+
+                @foreach (var item in Model)
+                 {
+                    <tr style="width:80%;">
+                        <td style="width:2%"><input type="checkbox" /></td>
+                        <td style="width:8%">@Html.TextBoxFor(m => item.CaseName, new { style = "width:100%" })</td>
+                        <td style="width:8%">@Html.TextBoxFor(m => item.VersionNumber, new { style = "width:100%" })</td>
+                        <td style="width:8%">@Html.TextBoxFor(m => item.Project, new { style = "width:100%" })</td>
+                        <td style="width:10%">@Html.TextBoxFor(m => item.ProductName, new { style = "width:100%" })</td>
+                        <td style="width:8%">@Html.TextBoxFor(m => item.VerticalRise, new { style = "width:100%" })</td>
+                        <td style="width:15%">@Html.TextBoxFor(m => item.TrussPackageName, new { style = "width:100%" })</td>
+                        <td style="width:8%">@Html.TextBoxFor(m => item.StepWidth, new { style = "width:100%" })</td>
+                        <td style="width:8%">@Html.TextBoxFor(m => item.CreatedBy, new { style = "width:100%" })</td>
+                        <td style="width:15%">@Html.TextBoxFor(m => item.CreatedOn, new { style = "width:100%" })</td>
+                        <td style="width:5%">View</td>
+                        <td style="width:5%">@Html.ActionLink("ReportGen", "DownloadViewPDF","Home")</td>
+                    </tr>
+                }
+            </table>
+        </div>
+        <div>
+            <input type="button" id="btn1" value="Create Case" onclick="myFunction()" style="margin-right:100px;width:150px;" />
+
+            <input type="button" id="btn2" value="Create NewVersion" onclick="CreateNewVersionFunction()" style="margin-right:100px" />
+        </div>
+    </div>
+
+
+    <div id="ViewAll" class="tabcontent">
+
+    </div>
+</body>
+
+</html>

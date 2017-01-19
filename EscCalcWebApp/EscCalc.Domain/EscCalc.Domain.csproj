@@ -1,0 +1,273 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{E250435E-DED5-46C8-8628-0304603D8DC7}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>EscCalc.Domain</RootNamespace>
+    <AssemblyName>EscCalc.Domain</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="itextsharp, Version=5.5.10.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <HintPath>..\packages\iTextSharp.5.5.10\lib\itextsharp.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Abstract\ICaseVersionRepository.cs" />
+    <Compile Include="Abstract\IRepository.cs" />
+    <Compile Include="Entities\ClassModel\TxnCaseVersionValuesForIndex.cs" />
+    <Compile Include="Entities\EscCalcModel.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EscCalcModel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\EscCalcModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EscCalcModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\EscCalcModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EscCalcModel.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\MasterAdvanceParameter.cs">
+      <DependentUpon>EscCalcModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\MasterBrakeLoad.cs">
+      <DependentUpon>EscCalcModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\MasterChainPitchFactorFatigue.cs">
+      <DependentUpon>EscCalcModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\MasterCountryType.cs">
+      <DependentUpon>EscCalcModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\MasterDriveSystemQuantity.cs">
+      <DependentUpon>EscCalcModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\MasterEnvironmentType.cs">
+      <DependentUpon>EscCalcModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\MasterGearboxType.cs">
+      <DependentUpon>EscCalcModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\MasterHandrailDriveType.cs">
+      <DependentUpon>EscCalcModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\MasterHandrailShapeType.cs">
+      <DependentUpon>EscCalcModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\MasterImpactCoefficient.cs">
+      <DependentUpon>EscCalcModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\MasterInclination.cs">
+      <DependentUpon>EscCalcModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\MasterMaxCapacity.cs">
+      <DependentUpon>EscCalcModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\MasterNominalStepbandSpeed.cs">
+      <DependentUpon>EscCalcModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\MasterNominalStepWidth.cs">
+      <DependentUpon>EscCalcModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\MasterPowerSupply.cs">
+      <DependentUpon>EscCalcModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\MasterProduct.cs">
+      <DependentUpon>EscCalcModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\MasterProductRelease.cs">
+      <DependentUpon>EscCalcModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\MasterRatedLoad.cs">
+      <DependentUpon>EscCalcModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\MasterReferenceStandardGearbox.cs">
+      <DependentUpon>EscCalcModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\MasterReferenceStandardHandrail.cs">
+      <DependentUpon>EscCalcModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\MasterReferenceStandardStep.cs">
+      <DependentUpon>EscCalcModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\MasterReferenceStandardStepChain.cs">
+      <DependentUpon>EscCalcModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\MasterReferenceStandardTrackSystem.cs">
+      <DependentUpon>EscCalcModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\MasterRollerPitch.cs">
+      <DependentUpon>EscCalcModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\MasterSafetyFactorandPinPressure.cs">
+      <DependentUpon>EscCalcModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\MasterSpeedFactor.cs">
+      <DependentUpon>EscCalcModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\MasterSprocketTooth.cs">
+      <DependentUpon>EscCalcModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\MasterStepBandDriveType.cs">
+      <DependentUpon>EscCalcModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\MasterStepChainGuide.cs">
+      <DependentUpon>EscCalcModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\MasterStepChainSize.cs">
+      <DependentUpon>EscCalcModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\MasterStepChainType.cs">
+      <DependentUpon>EscCalcModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\MasterStepMaterial.cs">
+      <DependentUpon>EscCalcModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\MasterStoppingDistance.cs">
+      <DependentUpon>EscCalcModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\MasterStrandQuantity.cs">
+      <DependentUpon>EscCalcModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\MasterTeethNumberFactor.cs">
+      <DependentUpon>EscCalcModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\MasterTrussIntermediateSupport.cs">
+      <DependentUpon>EscCalcModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\MasterTrussPackage.cs">
+      <DependentUpon>EscCalcModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\MasterWearingFactor.cs">
+      <DependentUpon>EscCalcModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\MasterWearingfactorGraph.cs">
+      <DependentUpon>EscCalcModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\Models\CasePropertiesContext.cs" />
+    <Compile Include="Entities\MyEntities\CaseProperties.cs" />
+    <Compile Include="Entities\MyEntities\FinalCalcParam.cs" />
+    <Compile Include="Entities\TxnAdvanceParameter.cs">
+      <DependentUpon>EscCalcModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\TxnCase.cs">
+      <DependentUpon>EscCalcModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\TxnCaseNonStandardGearbox.cs">
+      <DependentUpon>EscCalcModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\TxnCaseNonStandardHandrail.cs">
+      <DependentUpon>EscCalcModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\TxnCaseNonStandardStep.cs">
+      <DependentUpon>EscCalcModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\TxnCaseNonStandardStepChain.cs">
+      <DependentUpon>EscCalcModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\TxnCaseNonStandardTrackSystem.cs">
+      <DependentUpon>EscCalcModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\TxnCaseVersion.cs">
+      <DependentUpon>EscCalcModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\TxnFinalCalcParameter.cs">
+      <DependentUpon>EscCalcModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\TxnIntermediateParameter.cs">
+      <DependentUpon>EscCalcModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\TxnLoadProfile.cs">
+      <DependentUpon>EscCalcModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\TxnReportOption.cs">
+      <DependentUpon>EscCalcModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Implementation\CaseVersionRepository.cs" />
+    <Compile Include="Implementation\Repository.cs" />
+    <Compile Include="Implementation\TxnCaseVersionValuesForTemplate.cs" />
+    <Compile Include="Implementation\UnitofWork.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.Config" />
+    <EntityDeploy Include="Entities\EscCalcModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>EscCalcModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="Entities\EscCalcModel.edmx.diagram">
+      <DependentUpon>EscCalcModel.edmx</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Entities\EscCalcModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>EscCalcModel.edmx</DependentUpon>
+      <LastGenOutput>EscCalcModel.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Entities\EscCalcModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>EscCalcModel.edmx</DependentUpon>
+      <LastGenOutput>EscCalcModel.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

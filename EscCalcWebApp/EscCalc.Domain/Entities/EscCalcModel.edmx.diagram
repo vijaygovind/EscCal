@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="b9069204e3294c7a81ea92049f14db80" Name="Diagram1">
+        <EntityTypeShape EntityType="ESCCALCModel.MasterAdvanceParameter" Width="1.5" PointX="0.75" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="ESCCALCModel.MasterBrakeLoad" Width="1.5" PointX="5.25" PointY="41.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="ESCCALCModel.MasterChainPitchFactorFatigue" Width="1.5" PointX="5.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ESCCALCModel.MasterCountryType" Width="1.5" PointX="9" PointY="35.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="ESCCALCModel.MasterDriveSystemQuantity" Width="1.5" PointX="5.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ESCCALCModel.MasterEnvironmentType" Width="1.5" PointX="9" PointY="38.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="ESCCALCModel.MasterGearboxType" Width="1.5" PointX="3" PointY="58.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ESCCALCModel.MasterHandrailDriveType" Width="1.5" PointX="9" PointY="40.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ESCCALCModel.MasterHandrailShapeType" Width="1.5" PointX="9" PointY="43.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="ESCCALCModel.MasterImpactCoefficient" Width="1.5" PointX="9" PointY="45.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="ESCCALCModel.MasterInclination" Width="1.5" PointX="6.75" PointY="70.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="ESCCALCModel.MasterMaxCapacity" Width="1.5" PointX="5.25" PointY="38.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ESCCALCModel.MasterNominalStepbandSpeed" Width="1.5" PointX="3" PointY="38.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="ESCCALCModel.MasterNominalStepWidth" Width="1.5" PointX="3" PointY="44.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ESCCALCModel.MasterPowerSupply" Width="1.5" PointX="9" PointY="59.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="ESCCALCModel.MasterProduct" Width="1.5" PointX="0.75" PointY="51" IsExpanded="true" />
+        <EntityTypeShape EntityType="ESCCALCModel.MasterProductRelease" Width="1.5" PointX="3" PointY="48.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="ESCCALCModel.MasterRatedLoad" Width="1.5" PointX="16" PointY="59.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="ESCCALCModel.MasterReferenceStandardGearbox" Width="1.5" PointX="5.25" PointY="50.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="ESCCALCModel.MasterReferenceStandardHandrail" Width="1.5" PointX="8.25" PointY="49.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="ESCCALCModel.MasterReferenceStandardStep" Width="1.5" PointX="5.25" PointY="45.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="ESCCALCModel.MasterReferenceStandardStepChain" Width="1.5" PointX="5.25" PointY="55.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="ESCCALCModel.MasterReferenceStandardTrackSystem" Width="1.5" PointX="8.25" PointY="55" IsExpanded="true" />
+        <EntityTypeShape EntityType="ESCCALCModel.MasterRollerPitch" Width="1.5" PointX="0.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ESCCALCModel.MasterSafetyFactorandPinPressure" Width="1.5" PointX="9" PointY="62.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="ESCCALCModel.MasterSpeedFactor" Width="1.5" PointX="3" PointY="3.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="ESCCALCModel.MasterSprocketTooth" Width="1.5" PointX="0.75" PointY="4.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="ESCCALCModel.MasterStepBandDriveType" Width="1.5" PointX="2.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ESCCALCModel.MasterStepChainGuide" Width="1.5" PointX="3" PointY="52.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ESCCALCModel.MasterStepChainSize" Width="1.5" PointX="3" PointY="55.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ESCCALCModel.MasterStepChainType" Width="1.5" PointX="9" PointY="64.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="ESCCALCModel.MasterStepMaterial" Width="1.5" PointX="3" PointY="41.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="ESCCALCModel.MasterStoppingDistance" Width="1.5" PointX="5.25" PointY="35.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="ESCCALCModel.MasterStrandQuantity" Width="1.5" PointX="9" PointY="67.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="ESCCALCModel.MasterTeethNumberFactor" Width="1.5" PointX="4.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ESCCALCModel.MasterTrussIntermediateSupport" Width="1.5" PointX="6.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ESCCALCModel.MasterTrussPackage" Width="1.5" PointX="9" PointY="69.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="ESCCALCModel.MasterWearingFactor" Width="1.5" PointX="9" PointY="73.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="ESCCALCModel.MasterWearingfactorGraph" Width="1.5" PointX="11.25" PointY="73.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ESCCALCModel.TxnAdvanceParameter" Width="1.5" PointX="3" PointY="0.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="ESCCALCModel.TxnCase" Width="1.5" PointX="9" PointY="76.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="ESCCALCModel.TxnCaseNonStandardGearbox" Width="1.5" PointX="13.5" PointY="47.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="ESCCALCModel.TxnCaseNonStandardHandrail" Width="1.5" PointX="16.5" PointY="49.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="ESCCALCModel.TxnCaseNonStandardStep" Width="1.5" PointX="16.5" PointY="44.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="ESCCALCModel.TxnCaseNonStandardStepChain" Width="1.5" PointX="16.5" PointY="54.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="ESCCALCModel.TxnCaseNonStandardTrackSystem" Width="1.5" PointX="19.5" PointY="49.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="ESCCALCModel.TxnCaseVersion" Width="1.5" PointX="11.25" PointY="44.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="ESCCALCModel.TxnFinalCalcParameter" Width="1.5" PointX="13.5" PointY="53" IsExpanded="true" />
+        <EntityTypeShape EntityType="ESCCALCModel.TxnIntermediateParameter" Width="1.5" PointX="13.5" PointY="69" IsExpanded="true" />
+        <EntityTypeShape EntityType="ESCCALCModel.TxnLoadProfile" Width="1.5" PointX="13.5" PointY="61.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="ESCCALCModel.TxnReportOption" Width="1.5" PointX="13.5" PointY="65.75" IsExpanded="true" />
+        <AssociationConnector Association="ESCCALCModel.FK_TxnAdvanceParameter_MasterAdvanceParameter" ManuallyRouted="false" />
+        <AssociationConnector Association="ESCCALCModel.FK_MasterBrakeLoad_MasterNominalStepWidth" ManuallyRouted="false" />
+        <AssociationConnector Association="ESCCALCModel.FK_TxnCaseVersion_MasterCountryType" ManuallyRouted="false" />
+        <AssociationConnector Association="ESCCALCModel.FK_TxnCaseVersion_MasterEnvironmentType" ManuallyRouted="false" />
+        <AssociationConnector Association="ESCCALCModel.FK_MasterReferenceStandardGearbox_MasterGearboxType" ManuallyRouted="false" />
+        <AssociationConnector Association="ESCCALCModel.FK_TxnCaseVersion_MasterGearboxType" ManuallyRouted="false" />
+        <AssociationConnector Association="ESCCALCModel.FK_TxnCaseVersion_MasterHandrailDriveType" ManuallyRouted="false" />
+        <AssociationConnector Association="ESCCALCModel.FK_TxnCaseVersion_MasterHandrailShapeType" ManuallyRouted="false" />
+        <AssociationConnector Association="ESCCALCModel.FK_TxnCaseVersion_MasterImpactCoefficient" ManuallyRouted="false" />
+        <AssociationConnector Association="ESCCALCModel.FK_MasterRatedLoad_MasterInclination" ManuallyRouted="false" />
+        <AssociationConnector Association="ESCCALCModel.FK_MasterTrussPackage_MasterInclination" ManuallyRouted="false" />
+        <AssociationConnector Association="ESCCALCModel.FK_MasterMaxCapacity_MasterNominalStepbandSpeed" ManuallyRouted="false" />
+        <AssociationConnector Association="ESCCALCModel.FK_MasterMaxCapacity_MasterNominalStepWidth" ManuallyRouted="false" />
+        <AssociationConnector Association="ESCCALCModel.FK_MasterStoppingDistance_MasterNominalStepbandSpeed" ManuallyRouted="false" />
+        <AssociationConnector Association="ESCCALCModel.FK_MasterRatedLoad_MasterNominalStepWidth" ManuallyRouted="false" />
+        <AssociationConnector Association="ESCCALCModel.FK_MasterReferenceStandardStep_MasterNominalStepWidth" ManuallyRouted="false" />
+        <AssociationConnector Association="ESCCALCModel.FK_TxnCaseVersion_MasterPowerSupply" ManuallyRouted="false" />
+        <AssociationConnector Association="ESCCALCModel.FK_MasterProductRelease_MasterProduct" ManuallyRouted="false" />
+        <AssociationConnector Association="ESCCALCModel.FK_MasterReferenceStandardGearbox_MasterProduct" ManuallyRouted="false" />
+        <AssociationConnector Association="ESCCALCModel.FK_MasterReferenceStandardHandrail_MasterProduct" ManuallyRouted="false" />
+        <AssociationConnector Association="ESCCALCModel.FK_MasterReferenceStandardStepChain_MasterProduct" ManuallyRouted="false" />
+        <AssociationConnector Association="ESCCALCModel.FK_MasterReferenceStandardTrackSystem_MasterProduct" ManuallyRouted="false" />
+        <AssociationConnector Association="ESCCALCModel.FK_MasterStepChainGuide_MasterProduct" ManuallyRouted="false" />
+        <AssociationConnector Association="ESCCALCModel.FK_MasterStepChainSize_MasterProduct" ManuallyRouted="false" />
+        <AssociationConnector Association="ESCCALCModel.FK_TxnCaseNonStandardGearbox_MasterProduct" ManuallyRouted="false" />
+        <AssociationConnector Association="ESCCALCModel.FK_TxnCaseNonStandardHandrail_MasterProduct1" ManuallyRouted="false" />
+        <AssociationConnector Association="ESCCALCModel.FK_TxnCaseNonStandardStepChain_MasterProduct" ManuallyRouted="false" />
+        <AssociationConnector Association="ESCCALCModel.FK_TxnCaseNonStandardTrackSystem_MasterProduct" ManuallyRouted="false" />
+        <AssociationConnector Association="ESCCALCModel.FK_TxnCaseVersion_MasterProduct" ManuallyRouted="false" />
+        <AssociationConnector Association="ESCCALCModel.FK_MasterReferenceStandardGearbox_MasterProductRelease" ManuallyRouted="false" />
+        <AssociationConnector Association="ESCCALCModel.FK_MasterReferenceStandardHandrail_MasterProductRelease" ManuallyRouted="false" />
+        <AssociationConnector Association="ESCCALCModel.FK_MasterReferenceStandardStep_MasterProductRelease" ManuallyRouted="false" />
+        <AssociationConnector Association="ESCCALCModel.FK_MasterReferenceStandardStepChain_MasterProductRelease" ManuallyRouted="false" />
+        <AssociationConnector Association="ESCCALCModel.FK_MasterReferenceStandardTrackSystem_MasterProductRelease" ManuallyRouted="false" />
+        <AssociationConnector Association="ESCCALCModel.FK_TxnCaseVersion_MasterProductRelease" ManuallyRouted="false" />
+        <AssociationConnector Association="ESCCALCModel.FK_MasterReferenceStandardStep_MasterStepMaterial" ManuallyRouted="false" />
+        <AssociationConnector Association="ESCCALCModel.FK_MasterReferenceStandardTrackSystem_MasterStepChainGuide" ManuallyRouted="false" />
+        <AssociationConnector Association="ESCCALCModel.FK_TxnCaseVersion_MasterSafetyFactorandPinPressure" ManuallyRouted="false" />
+        <AssociationConnector Association="ESCCALCModel.FK_MasterSpeedFactor_MasterSprocketTeeth" ManuallyRouted="false" />
+        <AssociationConnector Association="ESCCALCModel.FK_TxnCaseVersion_MasterStepChainGuide" ManuallyRouted="false" />
+        <AssociationConnector Association="ESCCALCModel.FK_TxnCaseVersion_MasterStepChainType" ManuallyRouted="false" />
+        <AssociationConnector Association="ESCCALCModel.FK_TxnCaseNonStandardStep_MasterStepMaterial" ManuallyRouted="false" />
+        <AssociationConnector Association="ESCCALCModel.FK_TxnCaseVersion_MasterStepMaterial" ManuallyRouted="false" />
+        <AssociationConnector Association="ESCCALCModel.FK_TxnCaseVersion_MasterStrandQuantity" ManuallyRouted="false" />
+        <AssociationConnector Association="ESCCALCModel.FK_TxnCaseVersion_MasterTrussPackage" ManuallyRouted="false" />
+        <AssociationConnector Association="ESCCALCModel.FK_MasterWearingfactorGraph_MasterWearingFactor" ManuallyRouted="false" />
+        <AssociationConnector Association="ESCCALCModel.FK_TxnCaseVersion_MasterWearingFactor" ManuallyRouted="false" />
+        <AssociationConnector Association="ESCCALCModel.FK_TxnCaseVersion_MasterWearingFactor1" ManuallyRouted="false" />
+        <AssociationConnector Association="ESCCALCModel.FK_TxnCaseVersion_TxnCase" ManuallyRouted="false" />
+        <AssociationConnector Association="ESCCALCModel.FK_TxnCaseVersion_TxnCase1" ManuallyRouted="false" />
+        <AssociationConnector Association="ESCCALCModel.FK_TxnCaseNonStandardGearbox_TxnCaseVersion" ManuallyRouted="false" />
+        <AssociationConnector Association="ESCCALCModel.FK_TxnCaseNonStandardHandrail_TxnCaseVersion" ManuallyRouted="false" />
+        <AssociationConnector Association="ESCCALCModel.FK_TxnCaseNonStandardStep_TxnCaseVersion" ManuallyRouted="false" />
+        <AssociationConnector Association="ESCCALCModel.FK_TxnCaseNonStandardStepChain_TxnCaseVersion" ManuallyRouted="false" />
+        <AssociationConnector Association="ESCCALCModel.FK_TxnCaseNonStandardTrackSystem_TxnCaseVersion" ManuallyRouted="false" />
+        <AssociationConnector Association="ESCCALCModel.FK_TxnFinalCalcParameters_TxnCaseVersion" ManuallyRouted="false" />
+        <AssociationConnector Association="ESCCALCModel.FK_TxnIntermediateParameters_TxnCaseVersion" ManuallyRouted="false" />
+        <AssociationConnector Association="ESCCALCModel.FK_TxnLoadProfile_TxnCaseVersion" ManuallyRouted="false" />
+        <AssociationConnector Association="ESCCALCModel.FK_TxnReportOptions_TxnCaseVersion" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

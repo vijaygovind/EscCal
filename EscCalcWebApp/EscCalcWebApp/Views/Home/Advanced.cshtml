@@ -1,0 +1,170 @@
+﻿
+@{
+    ViewBag.Title = "Advanced";
+}
+
+<h2></h2>
+
+<script src="~/Scripts/jquery-1.12.4.min.js"></script>
+<script src="~/Scripts/jquery-ui-1.12.1.min.js"></script>
+<link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+<link href="~/Content/themes/base/all.css" rel="stylesheet" />
+<link href="~/Content/demos.css" rel="stylesheet" />
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        label {
+            display: inline-block;
+            width: 350px;
+            text-align: right;
+            clear: both;
+            float: left;
+            margin-right: 15px;
+        }
+    </style>
+    <script type="text/javascript" src="http://www.google.com/jsapi"></script>
+    <script type="text/javascript">
+        google.load("jquery", "1.4.4");
+    </script>
+
+</head>
+<body>
+
+    <div class="container">
+    </div>
+    <br />
+    <br />
+    <br />
+    <br />
+    <label for="inputsm" id="abf" style="margin-left:100px">
+        Advanced Parameters
+    </label><br /><br /><br />
+    <div class="form-group">
+
+        <label for="inputsm">Average Dead Load of a single person</label>
+        <table>
+            <tr>
+                <td>
+                    <input class="rbox" id="inputdefault" type="text" value="75Kg">
+                </td>
+                <td>
+                    <label id="abcd" style="width:15px"></label>
+                </td>
+                <td>
+                    <input class="form-control" id="inputdefault" type="text" style="width:150px;height:25px;">
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="form-group">
+        <label for="inputsm">Rated Load</label>
+        <table>
+            <tr>
+                <td>
+                    <input class="rbox" id="inputdefault" type="text" value="5000 N/m&sup2 ">
+                </td>
+                <td>
+                    <label id="abcd" style="width:15px"></label>
+                </td>
+                <td>
+                    <input class="form-control" id="inputdefault" type="text" style="width:150px;height:25px;">
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="form-group">
+        <label for="inputsm">chain drive efficiency - Worm / Helical drive</label>
+        <table>
+            <tr>
+                <td>
+                    <input class="rbox" id="inputdefault" type="text" value="0.97">
+                </td>
+                <td>
+                    <label id="abcd" style="width:15px"></label>
+                </td>
+                <td>
+                    <input class="form-control" id="inputdefault" type="text" style="width:150px;height:25px;">
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="form-group">
+        <label for="inputsm">chain drive efficiency - Direct drive</label>
+        <table>
+            <tr>
+                <td>
+                    <input class="rbox" id="inputdefault" type="text" value="1">
+                </td>
+                <td>
+                    <label id="abcd" style="width:15px"></label>
+                </td>
+                <td>
+                    <input class="form-control" id="inputdefault" type="text" style="width:150px;height:25px;">
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="form-group">
+        <label for="inputsm">friction coefficient of step band</label>
+        <table>
+            <tr>
+                <td>
+                    <input class="rbox" id="inputdefault" type="text" value="0.05">
+                </td>
+                <td>
+                    <label id="abcd" style="width:15px"></label>
+                </td>
+                <td>
+                    <input class="form-control" id="inputdefault" type="text" style="width:150px;height:25px;">
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="form-group">
+        <label for="inputsm">Safety factor Limit</label>
+        <table>
+            <tr>
+                <td>
+                    <input class="rbox" id="inputdefault" type="text" value="5">
+                </td>
+                <td>
+                    <label id="abcd" style="width:15px"></label>
+                </td>
+                <td>
+                    <input class="form-control" id="inputdefault" type="text" style="width:150px;height:25px;">
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="form-group">
+        <label for="inputsm">Pin Pressure Limit</label>
+        <table>
+            <tr>
+                <td>
+                    <input class="rbox" id="inputdefault" type="text" value="20">
+                </td>
+                <td>
+                    <label id="abcd" style="width:15px"></label>
+                </td>
+                <td>
+                    <input class="form-control" id="inputdefault" type="text" style="width:150px;height:25px;">
+                </td>
+            </tr>
+        </table>
+    </div>
+
+    <label></label> <input type="button" value="Save" style="align-content:center;background-color:ButtonFace;width:150px;height:30px;" />
+
+    <script>
+
+        $(function () {
+            $('.rbox').attr('readonly', 'true'); // mark it as read only
+            $('.rbox').css('background-color', '#D5DBDB'); // change the background color
+        })
+
+    </script>
+</body>
+</html>
+
+

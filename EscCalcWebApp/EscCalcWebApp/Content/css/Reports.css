@@ -1,0 +1,571 @@
+/*
+Created by Shivabalakrishna.k@itcinfotech.com
+Contains styles for the index.html (KONE Project)
+*/
+
+/* global styles */
+
+.globalMargin
+{
+	margin-left:30px;
+	margin-right:30px;
+}
+
+.globalPadding
+{
+	padding-left: 30px;
+	padding-right: 30px;
+}
+
+.cursorPointer
+{
+	cursor: pointer;
+}
+
+.centPercentWidth
+{
+	width:100%;
+}
+
+
+/* fonts across all the pages */
+
+/*body
+{
+	font-size: 16px;
+	font-family: Arial, sans-serif;
+	font-weight:400;
+	line-height: 1.6em;
+	color:#4c4c4c;
+	width:100%;
+	max-width:1200px;
+	margin-left: auto;
+	margin-right:auto;
+	background-color: #ccc;
+	position: relative;
+	overflow-x: hidden;
+}*/
+
+
+.defaultFontColor
+{
+	color:#4c4c4c;
+}
+
+.lightFontColor
+{
+	color:#9D9D9D;
+}
+
+/*.defaultHeadingFont
+{
+	font-size: 200%;
+	color:#4C4C4C;
+}*/
+
+.subHeadingFont
+{
+	font-size: 125%;
+}
+
+.smallHeadingFont
+{
+	font-weight: 600;
+	font-size:80%;
+	color: #9D9D9D;
+	font-variant-caps: all;
+}
+
+
+.listItemFont
+{
+	color:#0071B9;
+	
+}
+
+.extrainfoFont
+{
+	font-size: 80%;
+	color:#9D9D9D;
+}
+
+.buttonStyle1Font
+{
+	font-weight: 600;
+	font-size:80%;
+	background-color: #0071B9;
+	color:white;
+	font-variant-caps: all;
+}
+
+.buttonStyle2Font
+{
+	font-weight: 600;
+	font-size:80%;
+	color: #0071B9;
+	font-variant-caps: all;
+}
+
+.buttonStyle3Font
+{
+	font-weight: 600;
+	font-size:80%;
+	color: #4C4C4C;
+	font-variant-caps: all;
+}
+
+/***************** top menu styles *******************/
+#desktopMenu
+{
+	background-color:#0071B9;
+	width:100%;
+	height:50px;
+}
+.desktopMenuItem
+{
+	float:left;
+	padding:10px 10px;
+	
+	color:white;
+	cursor: pointer;
+}
+
+/* ************************ side menu styles ***************************/
+#fullMask
+{
+	position: absolute;
+	left:0px;
+	top:0px;
+	width:100%;
+	height: 0%;
+	background-color: RGBA(0,0,0,0.7);
+	z-index: 1000;
+	opacity:0;
+    transition:opacity 0.3s linear;
+
+}
+
+#sideMenu
+{
+	width: 0px;
+	background-color:white;
+	position: absolute;
+	left:0px;
+	top:0px;
+	height: 100%;
+	z-index: 1001;
+	overflow: hidden;
+	transition:width 0.3s ease-out;	
+}
+
+#sideMenu > ul
+{
+	width: 300px;
+	padding-left: 30px;
+	padding-top:15px;
+	
+}
+
+#sideMenu > ul > li
+{
+	
+	list-style: none;
+	color:#0071B9;
+	padding-top: 15px;
+    padding-bottom: 15px;
+    border-bottom: 2px solid #eeeeee;
+}
+
+#sideMenu > ul > li:first-child
+{
+	
+	
+	
+	padding-top: 0px;
+    padding-bottom: 15px;
+    border-bottom: none;
+}
+
+
+/*  Header styles */
+
+#headerSection
+{
+	box-shadow: 2px 2px 3px #ccc;
+	background-color: white;
+}
+
+#headerInnerSection
+{
+	padding:15px 0px;
+	
+}
+.zeroPadding
+{
+	padding: 0px;
+}
+.zeroMargin
+{
+	margin: 0px;
+}
+
+.row
+{
+	margin:0px;
+
+}
+
+.margincenter
+{
+	margin-left: auto;
+	margin-right: auto;
+	display: block;
+	;
+}
+
+/*#projectHeader
+{
+	text-align: center;
+	padding-top:30px;
+	margin-top:0px;
+	margin-bottom:0px;
+}*/
+
+.blueButton
+{
+	background-color: #0071B9;
+	border:0px;
+	border-radius: 2px;
+	width: 160px;
+	height:36px;
+	color:white;
+	font-weight: 500;
+}
+
+#searchSection
+{
+	background-image:URL('../img/search/BG.png');
+	background-size: 1px 100%;
+	display: inline-block;
+	width: 100%;
+}
+
+#searchInput1
+{
+	font-size:16px;
+	height: 36px;
+	font-style: italic;
+	border-width: 2px;
+
+}
+.glyphicon-search
+{
+	color: #0071B9;
+	font-size:18px;
+}
+
+.searchBtn
+{
+	
+	margin-top:20px;
+	margin-bottom:30px;
+	width:200px;
+	margin-left:auto;
+	margin-right:auto;
+	display:block;
+
+}
+
+.inset-shadow { 
+    
+
+    -moz-box-shadow:    inset  0  8px 8px -8px #bdbdbd, 
+                        inset  0 -8px 8px -8px #bdbdbd;
+    -webkit-box-shadow: inset  0  8px 8px -8px #bdbdbd, 
+                        inset  0 -8px 8px -8px #bdbdbd;
+     box-shadow:        inset  0  8px 8px -8px #bdbdbd, 
+                        inset  0 -8px 8px -8px #bdbdbd;
+}
+
+#reportBtn
+{
+	width:100%;
+	margin-left:auto;
+	margin-right:auto;
+}
+#searchDiv
+{
+	width:50%;
+	float: left;
+}
+
+.activeLink
+{
+	color:#0071B9;
+}
+
+#desktopMenu
+{
+	display: none;
+	padding-left: 20px;
+}
+
+#mainPageContent
+{
+	background-color: white;
+	width:100%;
+	height:auto;
+	display:block;
+}
+
+#controlsSection
+{
+	width: 500px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    /*padding-top: 30px;*/
+}
+
+.ipcomponent
+{
+    height:36px;
+    width:100%;
+	max-width:500px;
+    padding-left: 40px;
+    font-size:18px;
+}
+.inputBigHeader
+{
+	padding-top: 30px;
+	border-bottom: 1px solid #ccc;
+	padding-bottom:5px;
+}
+.inputHeader
+{
+	padding-top: 30px;
+}
+
+.inputSmallHeader
+{
+
+	padding-top: 10px;
+}
+
+.inner-addon { 
+    position: relative; 
+    width:100%;
+	max-width:500px;
+  margin-left:auto;
+  margin-right:auto;
+}
+
+/* style icon */
+.inner-addon .glyphicon {
+  position: absolute;
+  padding: 0px;
+  pointer-events: none;
+
+
+}
+
+.styled-select select
+{
+	background-color: white;
+
+	/*background-image: URL('../img/info_img.png');*/
+
+	background-repeat: no-repeat;
+
+	cursor:pointer;
+	display: block;
+	position: relative;
+    width: 100%;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    
+    height:36px;
+        border: 1px solid #ccc;
+    border-radius: 4px;
+    
+
+}
+
+.styled-select 
+{
+	position:relative;
+
+	max-width: 500px;
+	width:100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.styled-select img
+{
+	position:absolute;
+	top:0px;
+	left:0px;
+}
+
+/* align icon */
+.left-addon .glyphicon  { left:  0px;}
+.right-addon .glyphicon { right: 0px;}
+
+/* add padding  */
+.left-addon input  { padding-left:  40px; }
+.right-addon input { padding-right: 30px; }
+
+
+input[type="radio"] {
+    position:absolute;
+    clip: rect(0,0,0,0);
+    clip: rect(0 0 0 0);
+}
+
+input[type="radio"] + label::before {
+    content: url('../img/radio_btn.png');
+    cursor:pointer;
+}
+
+input[type="radio"]:checked + label::before {
+    content: url('../img/radio_btn_hover.png');
+    cursor:pointer;
+}
+
+input[type="radio"] + label div
+{
+	padding:5px;
+	margin-right:25px;
+	float:right;
+	cursor:pointer;
+	font-weight:500;
+}
+
+input[type="checkbox"] {
+    position:absolute;
+    clip: rect(0,0,0,0);
+    clip: rect(0 0 0 0);
+    clear:both;
+}
+
+input[type="checkbox"] + label::before {
+    content: url('../img/tickbox.png');
+    cursor:pointer;
+}
+
+input[type="checkbox"]:checked + label::before {
+    content: url('../img/tickbox_hover.png');
+    cursor:pointer;
+}
+
+input[type="checkbox"] + label div
+{
+	padding:5px 10px;
+	
+	margin-right:25px;
+	float:right;
+	cursor:pointer;
+	font-weight:500;
+}
+
+
+.checkboxinfoimg
+{
+	margin-right: 10px;
+}
+
+.smallHeading
+{
+	margin-top:20px;
+}
+
+
+
+#cancelAndSaveBtns
+{
+	height: 50px;
+	background-color: #0071B9;
+	
+		
+
+}
+#cancelAndSaveBtns div
+{
+	float:left;
+	width:50%;
+	color:white;
+	text-align: center;
+	padding-top: 5px;
+	margin-top:7px;
+	cursor:pointer;
+
+
+}
+
+#cancelAndSaveBtns > div:first-child
+{
+	border-right-color: white;
+	border-right: solid;
+	border-right-width: 1px;
+
+}
+
+.hideInLandscapeDivLeft
+{
+    width: 50%; float:left;
+}
+.hideInLandscapeDivRight
+{
+    width: 50%; float:right;
+}
+.w700 {
+    width: 700px;
+}
+
+@media only screen and (min-width: 1000px)
+{
+
+	#desktopMenu
+	{
+		display:block;
+	}
+
+	#mobileMenu, #mobileMenuIcon
+	{
+		display:none;
+	}
+}
+
+@media only screen and (max-width: 1024px)
+{
+	#cancelAndSaveBtns
+	{
+		height: 50px;
+		background-color: #0071B9;
+		
+
+		
+	    position:fixed;
+	    bottom:0px;
+	    left:0px;
+	    right:0px;
+	    height:50px;
+	    margin-bottom:0px;
+		
+
+	}
+
+    .hideInLandscapeView
+    {
+    	display:none !important;
+    }
+
+    .secondGlyphicon
+	{
+		
+		display:block;
+	}	
+}
+
